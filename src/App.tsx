@@ -1,13 +1,13 @@
 import "./App.css";
+import { HomePage, ShowDetails } from "@pages";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <p className="read-the-docs">Welcome to Mushyroll.</p>
-      <h1 className="text-3xl font-bold underline text-blue-600">
-        Tailwind is working!
-      </h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/show/:id" element={<ShowDetails />} />
+    </Routes>
   );
 }
 
